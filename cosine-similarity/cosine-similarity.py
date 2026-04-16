@@ -6,9 +6,12 @@ def cosine_similarity(a, b):
     Returns: float in [-1, 1]
     """
     # Write code here
-    norms =(np.linalg.norm(a) * np.linalg.norm(b))
-    if norms != 0:
-        cos_angle = np.dot(a, b) / norms
-        return cos_angle
-    else:
+    a = np.array(a)
+    b = np.array(b)
+
+    norms = np.linalg.norm(a) * np.linalg.norm(b)
+
+    if norms < 1e-12:
         return 0
+    else:
+        return np.dot(a, b) / norms
