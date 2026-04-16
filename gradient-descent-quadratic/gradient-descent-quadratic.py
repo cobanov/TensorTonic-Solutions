@@ -1,6 +1,3 @@
-def f(x):
-    return a * x**2 + b * x + c
-
 def grad(x, a, b):
     return 2*a*x + b
 
