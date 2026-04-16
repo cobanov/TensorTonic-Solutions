@@ -9,6 +9,6 @@ def gradient_descent_quadratic(a, b, c, x0, lr, steps):
     # Write code here
     x = x0
     for _ in range(steps):
-        x = x - lr * grad(x, a, b)
+        x -= lr * grad(x, a, b)
         print(x)
     return x
